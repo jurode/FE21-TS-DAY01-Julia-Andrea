@@ -79,24 +79,16 @@ var menuArray: Array<{
 // print our meals into #output
 
 // make a loop
-for (let i = 0; i < menuArray.length; i++){
+// for (let i = 0; i < menuArray.length; i++){
+for (let index in menuArray){
     let output : any = document.getElementById("output");
-    // var divContainer = document.createElement("div");
-    // divContainer.setAttribute("class","container");
-    // output.appendChild(divContainer);
 
-    // var divTitle = document.createElement("div");
-    // divTitle.setAttribute("class","mealTitle");
-    // let innerDivTitle = document.createTextNode(menuArray[i].mealTitle);
-    // divTitle.appendChild(innerDivTitle);
-
-    
     output.innerHTML += `
         <div class="mealContainer ">
-            <div class="mealTitle">${menuArray[i].mealTitle}</div>
-            <img class="img-thumbnail" src="${menuArray[i].mealImg}">
-            <div>${menuArray[i].mealDescription}</div>
-            <div>€ ${menuArray[i].mealPrice}</div>
+            <div class="mealTitle">${menuArray[index].mealTitle}</div>
+            <img class="img-thumbnail" src="${menuArray[index].mealImg}">
+            <div>${menuArray[index].mealDescription}</div>
+            <div>€ ${menuArray[index].mealPrice}</div>
         </div>
     `
 }
@@ -106,6 +98,25 @@ for (let i = 0; i < menuArray.length; i++){
 
 const contactInformation : string = "info@restaurant.es";
 document.getElementById("footer").innerHTML = contactInformation;
+
+
+
+
+
+
+// CODE PARKING LOT
+
+
+// var divContainer = document.createElement("div");
+// divContainer.setAttribute("class","container");
+// output.appendChild(divContainer);
+
+// var divTitle = document.createElement("div");
+// divTitle.setAttribute("class","mealTitle");
+// let innerDivTitle = document.createTextNode(menuArray[i].mealTitle);
+// divTitle.appendChild(innerDivTitle);
+
+
 
 // function printContact(){
 //     const contactInformation : string = "info@restaurant.es";

@@ -66,20 +66,22 @@ var menuArray = [
 ];
 // print our meals into #output
 // make a loop
-for (var i = 0; i < menuArray.length; i++) {
+// for (let i = 0; i < menuArray.length; i++){
+for (var index in menuArray) {
     var output = document.getElementById("output");
-    // var divContainer = document.createElement("div");
-    // divContainer.setAttribute("class","container");
-    // output.appendChild(divContainer);
-    // var divTitle = document.createElement("div");
-    // divTitle.setAttribute("class","mealTitle");
-    // let innerDivTitle = document.createTextNode(menuArray[i].mealTitle);
-    // divTitle.appendChild(innerDivTitle);
-    output.innerHTML += "\n        <div class=\"mealContainer \">\n            <div class=\"mealTitle\">" + menuArray[i].mealTitle + "</div>\n            <img class=\"img-thumbnail\" src=\"" + menuArray[i].mealImg + "\">\n            <div>" + menuArray[i].mealDescription + "</div>\n            <div>\u20AC " + menuArray[i].mealPrice + "</div>\n        </div>\n    ";
+    output.innerHTML += "\n        <div class=\"mealContainer \">\n            <div class=\"mealTitle\">" + menuArray[index].mealTitle + "</div>\n            <img class=\"img-thumbnail\" src=\"" + menuArray[index].mealImg + "\">\n            <div>" + menuArray[index].mealDescription + "</div>\n            <div>\u20AC " + menuArray[index].mealPrice + "</div>\n        </div>\n    ";
 }
 // declare a const variable
 var contactInformation = "info@restaurant.es";
 document.getElementById("footer").innerHTML = contactInformation;
+// CODE PARKING LOT
+// var divContainer = document.createElement("div");
+// divContainer.setAttribute("class","container");
+// output.appendChild(divContainer);
+// var divTitle = document.createElement("div");
+// divTitle.setAttribute("class","mealTitle");
+// let innerDivTitle = document.createTextNode(menuArray[i].mealTitle);
+// divTitle.appendChild(innerDivTitle);
 // function printContact(){
 //     const contactInformation : string = "info@restaurant.es";
 //     document.getElementById("footer").innerHTML = contactInformation;
