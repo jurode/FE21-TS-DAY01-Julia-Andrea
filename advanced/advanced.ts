@@ -2,10 +2,10 @@
 // @ts-check
 // Create a Restaurant Web Page using the below-provided Typescript concepts. Try to implement all of them in an appropriate place in the App:
 
-//   #  Define for each variable/array the data type
-//   ?  List the array items and make sure that it has a strict data type definition
-//   #  Use some loop for displaying the data into the Page (forEach, For in, or For-of)
-//     Define some appropriate value as const
+//    Define for each variable/array the data type
+//    List the array items and make sure that it has a strict data type definition
+//    Use some loop for displaying the data into the Page (forEach, For in, or For-of)
+//    Define some appropriate value as const
 
 // It is up to you how the front-end part will look like. It will be nice if you provide a well structured and designed Bootstrap page.
 
@@ -26,7 +26,7 @@ var menuArray: Array<{
     mealVeggy: false,
   },
   {
-    mealTitle: "Tortilla Espanola",
+    mealTitle: "Tortilla Espa&#241;ola",
     mealImg: "https://www.carolinescooking.com/wp-content/uploads/2015/04/Spanish-tortilla-espanola-photo.jpg",
     mealPrice: 5.30,
     mealDescription: "made from potatoes",
@@ -46,32 +46,32 @@ var menuArray: Array<{
     mealDescription: "fresh from Malaga",
     mealVeggy: false,
   },{
-    mealTitle: "Gambas Al Ajillo",
-    mealImg: "https://www.hola.com/imagenes/cocina/recetas/20191128154911/receta-gambas-al-ajillo/0-750-844/gambas-ajillo-m.jpg",
-    mealPrice: 7.90,
-    mealDescription: "Gambas",
-    mealVeggy: false,
-  },
-  {
-    mealTitle: "Tortilla Espanola",
-    mealImg: "https://www.carolinescooking.com/wp-content/uploads/2015/04/Spanish-tortilla-espanola-photo.jpg",
-    mealPrice: 5.30,
-    mealDescription: "made from potatoes",
+    mealTitle: "Gazpacho",
+    mealImg: "https://images.lecker.de/,id=1caf3c29,b=lecker,w=610,cg=c.jpg",
+    mealPrice: 8.30,
+    mealDescription: "cold",
     mealVeggy: true,
   },
   {
-    mealTitle: "Patatas Bravas",
-    mealImg: "https://www.pequerecetas.com/wp-content/uploads/2015/07/Patatas-bravas-Madrid-550x550.jpg",
-    mealPrice: 6.30,
-    mealDescription: "made from potatoes",
-    mealVeggy: true,
+    mealTitle: "Paella",
+    mealImg: "https://www.edeka.de/media/01-rezeptbilder/rezeptbilder-i-p/rez-edeka-paella-mit-meeresfruechten-rezept-i-p-1-1.jpg",
+    mealPrice: 15.30,
+    mealDescription: "with fresh seafood",
+    mealVeggy: false,
   },
   {
-    mealTitle: "Calamares Fritos",
-    mealImg: "https://unareceta.com/wp-content/uploads/2017/04/calamares-a-la-romana-tiernos.jpg",
-    mealPrice: 12.70,
-    mealDescription: "fresh from Malaga",
+    mealTitle: "Pulpo A La Gallega",
+    mealImg: "https://www.dunekacke.de/media/image/6a/f8/b7/pulpo-a-la-gallega-albo.jpg",
+    mealPrice: 16.30,
+    mealDescription: "with fresh seafood",
     mealVeggy: false,
+  },
+  {
+    mealTitle: "Sangria",
+    mealImg: "https://www.koch-mit.de/app/uploads/2019/08/sangria.jpg",
+    mealPrice: 3.50,
+    mealDescription: "with Alcohol",
+    mealVeggy: true,
   }
 ];
 
@@ -79,16 +79,15 @@ var menuArray: Array<{
 // print our meals into #output
 
 // make a loop
-// for (let i = 0; i < menuArray.length; i++){
 for (let index in menuArray){
-    let output : any = document.getElementById("output");
+    let output : HTMLElement = document.getElementById("output");
 
     output.innerHTML += `
-        <div class="mealContainer ">
-            <div class="mealTitle">${menuArray[index].mealTitle}</div>
+        <div class="mealContainer m-1 p-1 border">
+            <div class="mealTitle fs-4 fw-bold text-center mb-1">${menuArray[index].mealTitle}</div>
             <img class="img-thumbnail" src="${menuArray[index].mealImg}">
-            <div>${menuArray[index].mealDescription}</div>
-            <div>€ ${menuArray[index].mealPrice}</div>
+            <div class="pt-2 text-center">${menuArray[index].mealDescription}</div>
+            <div class="fw-bold text-center">€ ${menuArray[index].mealPrice}</div>
         </div>
     `
 }
@@ -97,7 +96,7 @@ for (let index in menuArray){
 // declare a const variable
 
 const contactInformation : string = "info@restaurant.es";
-document.getElementById("footer").innerHTML = contactInformation;
+document.getElementById("footer").innerHTML = "contact: " + contactInformation;
 
 
 
